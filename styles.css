@@ -1,0 +1,71 @@
+
+.octodex {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+
+.octocat {
+  flex: 1;
+  flex-basis: 0;
+  margin: 10px;
+  position: relative;
+}
+
+.octocat > a > img {
+  width: 100%;
+  border: 2px solid lightgray;
+  border-radius: 3px;
+}
+
+.image-footer {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  position: absolute;
+
+}
+
+.image-footer::after{
+  border-top: 4px;
+  content: 0px;
+  border-color: currentColor;
+}
+
+.image-number::before{
+  content: '#';
+}
+
+.image-caption{
+  display: flex;
+  align-items: center;
+  font-family: Arial;
+  font-weight: bold
+}
+
+.image-caption *{
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.authors {
+  display: flex;
+}
+
+.authors li {
+  display: flex;
+}
+
+.authors li a img {
+  width: 25px;
+  height: 25px;
+}
+
+.authors img {
+  width: 100%;
+  border-radius: 3px
+  margin-left: 4px;
+}
