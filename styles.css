@@ -1,5 +1,6 @@
 
 .octodex {
+  list-style-type: none;
   display: flex;
   margin: 10px;
   padding: 10px;
@@ -10,33 +11,41 @@
   flex-basis: 0;
   margin: 10px;
   position: relative;
+  bor
 }
 
 .octocat > a > img {
   width: 100%;
+  height: 100%;
   border: 2px solid lightgray;
   border-radius: 3px;
 }
 
-.image-footer {
-  display: inline-block;
+.octocat::after {
+  content:'';
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid gray;
+  position: absolute;
+  top:420px;
+  right:0px;
+}
+
+.image-footer{
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
-  position: absolute;
-
-}
-
-.image-footer::after{
-  border-top: 4px;
-  content: 0px;
-  border-color: currentColor;
+  border-bottom: 2px solid lightgrey;
 }
 
 .image-number::before{
   content: '#';
+  font-weight: bold;
+  color: gray;
 }
 
 .image-caption{
@@ -44,9 +53,14 @@
   align-items: center;
   font-family: Arial;
   font-weight: bold
+  margin-right: 0;
 }
 
-.image-caption *{
+.image-caption span{
+  margin: 0px auto;
+
+}
+.image-caption div{
   margin-left: 3px;
   margin-right: 3px;
 }
@@ -59,7 +73,7 @@
   display: flex;
 }
 
-.authors li a img {
+.authors li > a > img {
   width: 25px;
   height: 25px;
 }
